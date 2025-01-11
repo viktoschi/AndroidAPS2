@@ -50,7 +50,6 @@ class Objective2(injector: HasAndroidInjector) : Objective(injector, "exam", R.s
                 .option(Option(R.string.isf_increasingvalue, false))
                 .option(Option(R.string.isf_noeffect, false))
                 .hint(Hint(R.string.isf_hint1))
-                .hint(Hint(R.string.isf_hint2))
                 .learned(Learned(R.string.objectives_exam_learned_isf))
         )
         tasks.add(
@@ -191,13 +190,15 @@ class Objective2(injector: HasAndroidInjector) : Objective(injector, "exam", R.s
         )
         tasks.add(
             ExamTask(this, R.string.troubleshooting_label, R.string.troubleshooting_wheretoask, "troubleshooting")
-                .option(Option(R.string.troubleshooting_fb, false))
-                .option(Option(R.string.troubleshooting_wiki, false))
-                .option(Option(R.string.troubleshooting_gitter, false))
+                .option(Option(R.string.troubleshooting_fb, true))
+                .option(Option(R.string.troubleshooting_wiki, true))
+                .option(Option(R.string.troubleshooting_discord, true))
+                .option(Option(R.string.troubleshooting_github, true))
                 .option(Option(R.string.troubleshooting_yourendo, false))
                 .hint(Hint(R.string.troubleshooting_hint1))
                 .hint(Hint(R.string.troubleshooting_hint2))
                 .hint(Hint(R.string.troubleshooting_hint3))
+                .hint(Hint(R.string.troubleshooting_hint4))
         )
         tasks.add(
             ExamTask(this, R.string.wrongcarbs_label, R.string.wrongcarbs_whattodo, "wrongcarbs")
@@ -251,6 +252,7 @@ class Objective2(injector: HasAndroidInjector) : Objective(injector, "exam", R.s
                 .option(Option(R.string.breadgrams_decay, false))
                 .option(Option(R.string.breadgrams_calc, false))
                 .hint(Hint(R.string.breadgrams_hint1))
+                .hint(Hint(R.string.breadgrams_hint2))
                 .learned(Learned(R.string.objectives_exam_learned_breadgrams))
         )
         tasks.add(
